@@ -1,2 +1,2 @@
 SELECT COUNT(id) FROM employee 
-WHERE lastname = 'Smith';
+WHERE last_name = 'Smith';
