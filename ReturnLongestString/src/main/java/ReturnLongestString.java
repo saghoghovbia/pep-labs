@@ -1,4 +1,6 @@
 
+import java.util.*;
+
 public class ReturnLongestString {
     /**
      * Return the longest String out of arr.
@@ -8,6 +10,19 @@ public class ReturnLongestString {
      * @return the longest String within arr. You can assume that there are no ties for the longest string.
      */
     public String longest(String[] arr){
-        return null;
+        int num = 0;
+        int longest = 0;
+        int ndx = 0;
+        Map<String,Integer> map = new HashMap();
+        for(String string:arr){
+            num=string.length();
+            map.put(string,num);
+            if(num>longest){
+                longest = num;
+            }
+            ndx +=1;
+        }
+        return arr[ndx-1];
     }
 }
+// I have the length of the string, now I need to find out which string has the length.
