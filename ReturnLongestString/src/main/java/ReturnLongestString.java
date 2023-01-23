@@ -13,16 +13,18 @@ public class ReturnLongestString {
         int num = 0;
         int longest = 0;
         int ndx = 0;
+        int ndxL = 0;
         Map<String,Integer> map = new HashMap();
         for(String string:arr){
             num=string.length();
             map.put(string,num);
             if(num>longest){
                 longest = num;
+                ndxL = ndx;
             }
             ndx +=1;
         }
-        return arr[ndx-1];
+        return arr[ndxL];
     }
 }
 // I have the length of the string, now I need to find out which string has the length.
