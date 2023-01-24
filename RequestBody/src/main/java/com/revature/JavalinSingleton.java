@@ -42,11 +42,13 @@ public class JavalinSingleton {
                ObjectMapper om = new ObjectMapper();
                Song song = om.readValue(info, Song.class);
 
+               // ctx.contentType("application/json"); 
+
                song.setArtistName("Beatles");
 
-               //String jsonStringToBeReturned = om.writeValueAsString(song);
+               String jsonStringToBeReturned = om.writeValueAsString(song);
 
-               ctx.result(song.getArtistName());
+               ctx.result(jsonStringToBeReturned);
         });
 
 
